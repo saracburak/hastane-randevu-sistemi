@@ -1,0 +1,34 @@
+.main-slider {
+  width: 100%; /* Sayfanın yatay alanını tamamen kapla */
+  margin: 0; /* Ortalamayı kaldır, sayfa boyunca yayılsın */
+  overflow: hidden; /* Taşan kısımları gizle */
+  position: relative;
+  height: 400px; /* Slider'ın yüksekliğini sabit tut */
+  max-height: 500px; /* Maksimum yüksekliği belirle */
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: auto; /* Resim sayısına göre genişlik */
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi alanın içine sığdır, taşan kısımları kes */
+  flex-shrink: 0;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .main-slider {
+    height: 200px; /* Mobil cihazlar için yüksekliği azalt */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-slider {
+    height: 150px; /* Daha küçük mobil cihazlar için yüksekliği daha da azalt */
+  }
+}
